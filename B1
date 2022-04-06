@@ -1,0 +1,46 @@
+#include <iostream>
+#include <stdio.h>
+//#include <conio.h>
+#include <string.h>
+#include <cstring>
+#include <cctype>
+
+using namespace std;
+
+int tinhtongso(int so);
+int main()
+{
+    char str[] = "A1A1A1A1";
+    char kq[100];
+    int i = 0;
+    int n = 0;
+    
+    for(i=0; i<=strlen(str); ++i){
+        if(isdigit(str[i])){
+            kq[n] = str[i];
+            n++;
+            kq[n] = '\0';
+        }else if(n){
+            cout << kq << endl;
+            int kqq;
+            for(i = 1; i <= kq; i++){
+                cin >> kqq[i]
+            }
+        }
+    }
+    return 0;
+}
+
+int tinhtongso(int so){
+    int soTemp;
+    int tong = 0;
+    // cout << "Nhap vao so: ";
+    // cin >> so;
+    soTemp = so;
+    while (soTemp != 0) {
+        tong += soTemp % 10;
+        soTemp /= 10;
+    }
+    cout << "Tổng của " << so << " là " << tong << endl;
+    return 0;
+}
